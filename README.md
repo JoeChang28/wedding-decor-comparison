@@ -12,3 +12,5 @@ npm run dev
 ## 發佈
 
 推送至 `main` 分支後，GitHub Actions 會建立靜態網站並自動部署至 GitHub Pages。
+
+目前版本已設定由 GitHub Actions 自動發佈。
