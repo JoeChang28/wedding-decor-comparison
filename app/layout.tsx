@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "婚禮佈置提案比較｜好醉工作室 × 芮希",
     description: "作品風格、主景方案、加購項目與價格，一頁看懂。",
-    images: ["https://joechang28.github.io/wedding-decor-comparison/og.png"],
+    images: ["https://joechang28.github.io/wedding-decor-comparison/og.jpg"],
     locale: "zh_TW",
     type: "website",
   },
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "婚禮佈置提案比較｜好醉工作室 × 芮希",
     description: "作品風格、主景方案、加購項目與價格，一頁看懂。",
-    images: ["https://joechang28.github.io/wedding-decor-comparison/og.png"],
+    images: ["https://joechang28.github.io/wedding-decor-comparison/og.jpg"],
   },
   icons: {
     icon: "/wedding-decor-comparison/favicon.svg",
