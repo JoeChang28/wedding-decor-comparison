@@ -647,6 +647,68 @@ img {
   font-size: 11px;
 }
 
+.rexi-full-package {
+  margin-bottom: 10px;
+  padding: 34px;
+  color: var(--white);
+  background: #30342f;
+}
+
+.rexi-full-package > p:first-child {
+  margin: 0 0 8px;
+  color: #cbd3c5;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.rexi-full-package h3 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(32px, 3.2vw, 48px);
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+.rexi-full-package > strong {
+  display: block;
+  margin: 10px 0 18px;
+  color: #e8c4b9;
+  font-family: var(--display);
+  font-size: 34px;
+  font-weight: 400;
+}
+
+.rexi-full-package > p:not(:first-child) {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 12px;
+}
+
+.rexi-full-package ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 24px 0 0;
+  padding: 22px 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  list-style: none;
+}
+
+.rexi-full-package li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 11px;
+}
+
+.rexi-full-package li span {
+  color: #cbd3c5;
+  font-family: var(--display);
+  font-size: 17px;
+  font-style: italic;
+}
+
 .menu-columns {
   display: grid;
   gap: 0;
@@ -687,6 +749,58 @@ img {
 
 .menu-group li b {
   color: var(--ink);
+}
+
+.photo-wall-feature {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 54px;
+  align-items: center;
+  margin-top: 90px;
+  padding-top: 70px;
+  border-top: 1px solid rgba(36, 35, 33, 0.18);
+}
+
+.photo-wall-feature h3 {
+  max-width: 640px;
+  margin: 0 0 18px;
+  font-family: var(--display);
+  font-size: clamp(36px, 4vw, 58px);
+  font-weight: 400;
+  line-height: 1.12;
+}
+
+.photo-wall-feature > div > p:not(.eyebrow) {
+  margin: 0 0 28px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.photo-wall-feature figure {
+  margin: 0;
+}
+
+.photo-wall-feature figure img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.photo-wall-feature figcaption {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.album-link {
+  display: inline-flex;
+  margin-top: 24px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid currentColor;
+  color: var(--rose-deep);
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .aisle-feature {
@@ -1236,14 +1350,28 @@ footer > a {
   }
 
   .rexi-showcase,
+  .photo-wall-feature,
   .aisle-feature {
     grid-template-columns: 1fr;
     gap: 28px;
   }
 
+  .photo-wall-feature,
   .aisle-feature {
     margin-top: 60px;
     padding-top: 55px;
+  }
+
+  .photo-wall-feature figure {
+    order: -1;
+  }
+
+  .rexi-full-package {
+    padding: 28px 24px;
+  }
+
+  .rexi-full-package ul {
+    grid-template-columns: 1fr;
   }
 
   .mini-price-grid {

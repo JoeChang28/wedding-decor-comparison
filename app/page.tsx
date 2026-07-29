@@ -50,6 +50,7 @@ const addons: AddOn[] = [
   { id: "s-floor", vendor: "好醉", name: "地貼（5 米內）", price: 3500, note: "6 米內 NT$ 4,200" },
   { id: "s-vip", vendor: "好醉", name: "西式主桌佈置", price: 5000 },
   { id: "s-dessert", vendor: "好醉", name: "點心桌花藝", price: 2000 },
+  { id: "r-full-package", vendor: "芮希", name: "花藝整套方案", price: 35800, note: "含收禮桌、相本桌佈置與新人客製設計立體字" },
   { id: "r-wall", vendor: "芮希", name: "婚紗牆／大型座位表", price: 4200, note: "80 × 200 cm；含花藝為 NT$ 4,600" },
   { id: "r-mirror", vendor: "芮希", name: "公版迎賓鏡", price: 1500, note: "含花藝，活動後回收" },
   { id: "r-custom-mirror", vendor: "芮希", name: "客製迎賓鏡", price: 3500, note: "約 45 × 52 cm，含花藝，可帶回" },
@@ -61,6 +62,10 @@ const addons: AddOn[] = [
   { id: "r-ground", vendor: "芮希", name: "地花＋草皮一對", price: 2500 },
   { id: "r-paper", vendor: "芮希", name: "大型紙花一對", price: 3500, note: "2 朵大型紙花＋地花" },
   { id: "r-aisle", vendor: "芮希", name: "花柱走道花一對", price: 4000, note: "一對 2 柱" },
+  { id: "r-photo-large", vendor: "芮希", name: "大型相片牆・無花藝", price: 2000 },
+  { id: "r-photo-small", vendor: "芮希", name: "小型相片牆・無花藝", price: 1900 },
+  { id: "r-photo-large-floral", vendor: "芮希", name: "大型相片牆・含花藝", price: 2300 },
+  { id: "r-photo-small-floral", vendor: "芮希", name: "小型相片牆・含花藝", price: 2200 },
 ];
 
 const money = new Intl.NumberFormat("zh-TW");
@@ -111,8 +116,8 @@ export default function Home() {
           </div>
           <div className="hero-stats">
             <div><b>2</b><span>家提案</span></div>
-            <div><b>3</b><span>主景系列</span></div>
-            <div><b>20</b><span>項加購單品</span></div>
+            <div><b>4</b><span>種完整主景</span></div>
+            <div><b>25</b><span>項方案與單品</span></div>
           </div>
         </div>
         <div className="hero-visual">
@@ -131,8 +136,8 @@ export default function Home() {
       <section className="verdict section" id="verdict">
         <div className="section-heading">
           <p className="eyebrow">THE SHORT ANSWER</p>
-          <h2>先說結論：兩家不是同一種賽道</h2>
-          <p>好醉提供「完整場景」，芮希提供「自由組裝」。選擇關鍵不是誰比較便宜，而是你需要一座主景，還是把預算集中在幾個有感細節。</p>
+          <h2>先說結論：兩家都能做完整主景，但選法不同</h2>
+          <p>好醉以三套公版花園主景提供清楚的畫面與價格；芮希除了單品自由組裝，也有 NT$ 35,800 花藝整套方案。選擇關鍵是偏好快速套用成熟場景，還是希望主景、雙桌與新人立體字一起客製。</p>
         </div>
         <div className="verdict-grid">
           <article className="verdict-card savor">
@@ -146,10 +151,10 @@ export default function Home() {
           <article className="verdict-card rexi">
             <div className="card-index">B</div>
             <p className="vendor-label">REXI · 芮希</p>
-            <h3>想用有限預算，把迎賓與動線細節做得剛剛好</h3>
-            <p>迎賓鏡、座位表、寵物立牌、走道花等單品清楚，可依場地現況與需求自由增減。</p>
-            <div className="price-line"><span>單品方案</span><strong>NT$ 700 起</strong></div>
-            <span className="pill">適合：場地已有背板、偏好彈性搭配</span>
+            <h3>想把花藝主景、迎賓桌面與專屬名字一次整合</h3>
+            <p>整套方案涵蓋花藝主景、收禮桌、相本桌與新人客製立體字，也保留迎賓鏡、相片牆、走道花等單品選擇。</p>
+            <div className="price-line"><span>花藝整套方案</span><strong>NT$ 35,800</strong></div>
+            <span className="pill">適合：重視客製細節，也希望保留單品彈性</span>
           </article>
         </div>
       </section>
@@ -169,10 +174,10 @@ export default function Home() {
             <div role="columnheader"><span className="dot dot-rexi" /> 芮希</div>
           </div>
           {[
-            ["核心模式", "完整公版主景＋加購模組", "迎賓／輸出／花藝單品自由搭配"],
-            ["價格帶", "主景 NT$ 21,500–33,000", "單品 NT$ 700–5,500"],
-            ["主視覺", "法式小花園、粉霧花園、精靈花園", "現有主景作品可參考，提案未列主景包套價"],
-            ["方案贈送", "Logo／相本桌佈置／地貼，公版 3 選 1", "提案未載明"],
+            ["核心模式", "三款完整公版主景＋加購模組", "客製花藝整套方案＋單品自由搭配"],
+            ["價格帶", "主景 NT$ 21,500–33,000", "整套 NT$ 35,800；單品 NT$ 700–5,500"],
+            ["主視覺", "法式小花園、粉霧花園、精靈花園", "客製花藝主景整套方案"],
+            ["方案內容", "Logo／相本桌佈置／地貼，公版 3 選 1", "含收禮桌、相本桌與新人客製設計立體字"],
             ["進撤場", "專人進撤場佈置", "提案未載明，建議確認"],
             ["場勘", "專人提前場勘", "提案未載明，建議確認"],
             ["燈光", "含氛圍燈光設計／補光燈", "提案未載明"],
@@ -180,7 +185,7 @@ export default function Home() {
             ["場地限制", "僅限室內；報價僅送客區", "大型紙花需先定位，不建議移動"],
             ["交通", "新竹市區優惠免車資", "提案未載明，建議確認"],
             ["證婚共用", "若使用於證婚，需額外報價", "走道花可單獨搭配"],
-            ["最適合", "要有完整大景、重視婚紗與送客照", "場地已有硬體、只想補強迎賓與動線"],
+            ["最適合", "喜歡成熟公版、要快速確認完整大景", "想客製主景與新人名字，或只補強迎賓動線"],
           ].map(([label, savor, rexi]) => (
             <div className="compare-row" role="row" key={label}>
               <div role="rowheader">{label}</div>
@@ -229,44 +234,75 @@ export default function Home() {
       <section className="rexi-section section">
         <div className="section-heading row-heading">
           <div>
-            <p className="eyebrow">REXI · À LA CARTE</p>
-            <h2>芮希｜把預算花在看得見的細節</h2>
+            <p className="eyebrow">REXI · FULL PACKAGE & À LA CARTE</p>
+            <h2>芮希｜完整花藝主景，也能自由加購</h2>
           </div>
-          <p>適合婚宴場地已有背板或佈置基礎，希望加強迎賓、座位引導、寵物元素與走道花藝。</p>
+          <p>想一次完成主景與迎賓桌面，可選 NT$ 35,800 整套方案；場地已有佈置基礎，也能只加購迎賓、相片牆與走道花藝。</p>
         </div>
         <div className="rexi-showcase">
           <figure>
             <img src="works/rexi-main-backdrop.jpg" alt="芮希婚禮主景花藝背板作品" />
-            <figcaption>主景花藝作品參考 <span>提案未附包套價格</span></figcaption>
+            <figcaption>花藝整套方案主景作品 <span>NT$ 35,800</span></figcaption>
           </figure>
-          <div className="menu-columns">
-            <div className="menu-group">
-              <p>WELCOME AREA</p>
-              <h3>迎賓與座位引導</h3>
+          <div>
+            <article className="rexi-full-package">
+              <p>FLORAL FULL PACKAGE</p>
+              <h3>芮希花藝整套方案</h3>
+              <strong>NT$ 35,800</strong>
+              <p>從主景到迎賓桌面一次完成，並以新人姓名立體字建立專屬識別，適合希望視覺一致又保留客製感的婚禮。</p>
               <ul>
-                <li><span>婚紗牆／大型座位表</span><b>4,200</b></li>
-                <li><span>含花藝版本</span><b>4,600</b></li>
-                <li><span>座位表＋迎賓板</span><b>2,500</b></li>
+                <li><span>01</span>客製花藝主景</li>
+                <li><span>02</span>收禮桌佈置</li>
+                <li><span>03</span>相本桌佈置</li>
+                <li><span>04</span>新人客製設計立體字</li>
               </ul>
-            </div>
-            <div className="menu-group">
-              <p>MIRROR</p>
-              <h3>迎賓鏡面</h3>
-              <ul>
-                <li><span>公版迎賓鏡・回收</span><b>1,500</b></li>
-                <li><span>客製迎賓鏡・可帶回</span><b>3,500</b></li>
-                <li><span>全身迎賓鏡</span><b>5,500</b></li>
-              </ul>
-            </div>
-            <div className="menu-group">
-              <p>PERSONAL TOUCH</p>
-              <h3>個人化輸出</h3>
-              <ul>
-                <li><span>拍照框 60 × 80 cm</span><b>1,500</b></li>
-                <li><span>寵物立牌 45／60／80 cm</span><b>700 起</b></li>
-              </ul>
+            </article>
+            <div className="menu-columns">
+              <div className="menu-group">
+                <p>WELCOME AREA</p>
+                <h3>迎賓與座位引導</h3>
+                <ul>
+                  <li><span>婚紗牆／大型座位表</span><b>4,200</b></li>
+                  <li><span>含花藝版本</span><b>4,600</b></li>
+                  <li><span>座位表＋迎賓板</span><b>2,500</b></li>
+                </ul>
+              </div>
+              <div className="menu-group">
+                <p>MIRROR & PERSONAL TOUCH</p>
+                <h3>迎賓鏡與個人化輸出</h3>
+                <ul>
+                  <li><span>公版／客製／全身迎賓鏡</span><b>1,500 起</b></li>
+                  <li><span>拍照框 60 × 80 cm</span><b>1,500</b></li>
+                  <li><span>寵物立牌 45／60／80 cm</span><b>700 起</b></li>
+                </ul>
+              </div>
             </div>
           </div>
+        </div>
+        <div className="photo-wall-feature">
+          <div>
+            <p className="eyebrow">PHOTO STORY WALL</p>
+            <h3>把婚紗照變成賓客會停下來看的故事牆</h3>
+            <p>可依現場尺度選擇大、小版本；含花藝方案只比無花藝版本增加 NT$ 300，適合希望相片牆與整體花色互相呼應的新人。</p>
+            <div className="mini-price-grid">
+              <span>大型・不含花藝 <b>NT$ 2,000</b></span>
+              <span>小型・不含花藝 <b>NT$ 1,900</b></span>
+              <span>大型・含花藝 <b>NT$ 2,300</b></span>
+              <span>小型・含花藝 <b>NT$ 2,200</b></span>
+            </div>
+            <a
+              className="album-link"
+              href="https://drive.google.com/drive/folders/1DqZ-iHGVPhvOLAcMNerVrOtd3FiWcvFd"
+              target="_blank"
+              rel="noreferrer"
+            >
+              查看芮希相片牆完整作品集 ↗
+            </a>
+          </div>
+          <figure>
+            <img src="works/rexi-photo-wall.jpg" alt="芮希婚紗照相片牆與花藝佈置作品" />
+            <figcaption>芮希 · 客製相片牆作品 <span>大／小尺寸可選</span></figcaption>
+          </figure>
         </div>
         <div className="aisle-feature">
           <img src="works/rexi-aisle-flowers.jpg" alt="芮希地花、大紙花與花柱走道花方案" />
@@ -279,7 +315,7 @@ export default function Home() {
               <span>花柱走道花一對 <b>NT$ 4,000</b></span>
               <span>宴會廳地上花叢一對 <b>NT$ 3,500</b></span>
             </div>
-            <p className="muted">大型紙花需事先安排高低層次與位置，不建議婚宴中途移動。</p>
+            <p className="muted">宴會廳地上花叢一對 NT$ 3,500。大型紙花需事先安排高低層次與位置，不建議婚宴中途移動，因此建議另外加購地上花叢。</p>
           </div>
         </div>
       </section>
@@ -303,6 +339,10 @@ export default function Home() {
             <figcaption><b>好醉 · 走道／相片牆</b><span>延伸婚禮動線</span></figcaption>
           </figure>
           <figure className="gallery-wide">
+            <img src="works/rexi-photo-wall.jpg" alt="芮希大型婚紗照相片牆與花藝作品" />
+            <figcaption><b>芮希 · 客製相片牆</b><span>把婚紗照變成現場故事</span></figcaption>
+          </figure>
+          <figure className="gallery-wide">
             <img src="works/rexi-main-backdrop.jpg" alt="芮希清新花藝背板完整作品" />
             <figcaption><b>芮希 · 清新花藝背板</b><span>留白、自然、可愛的大型紙花</span></figcaption>
           </figure>
@@ -313,8 +353,8 @@ export default function Home() {
         <div className="calculator-top">
           <div className="section-heading">
             <p className="eyebrow">QUICK ESTIMATE</p>
-            <h2>加購項目快速試算</h2>
-            <p>勾選想要的單品，先掌握大致加購金額。此處不含主景方案、折扣、車資與未載明費用。</p>
+            <h2>方案與加購快速試算</h2>
+            <p>勾選想要的方案或單品，先掌握大致金額。好醉主景方案仍請依上方價格比較；此處不含折扣、車資與未載明費用。</p>
           </div>
           <div className="total-card">
             <span>目前加購估算</span>
@@ -357,7 +397,7 @@ export default function Home() {
         <div className="decision-list">
           <article>
             <span>01</span>
-            <div><h3>場地本身有可以直接使用的背板嗎？</h3><p>沒有，或現有背板不符合婚禮色系 → 優先看好醉完整主景。</p></div>
+            <div><h3>場地本身有可以直接使用的背板嗎？</h3><p>沒有 → 比較好醉成熟公版與芮希客製整套；有 → 可把預算放在芮希相片牆、迎賓鏡與走道花等單品。</p></div>
           </article>
           <article>
             <span>02</span>
@@ -371,7 +411,7 @@ export default function Home() {
         <div className="final-recommendation">
           <div><span>選完整度</span><b>好醉工作室</b><p>完整主景、燈光、場勘與進撤場資訊較清楚。</p></div>
           <div className="or">OR</div>
-          <div><span>選自由度</span><b>芮希</b><p>單品透明、低門檻，適合依場地需求精準加購。</p></div>
+          <div><span>選客製與自由度</span><b>芮希</b><p>整套方案整合主景、雙桌與新人立體字，也能依場地精準加購單品。</p></div>
         </div>
       </section>
 
