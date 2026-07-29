@@ -41,6 +41,9 @@ const savorPlans = [
 ];
 
 const addons: AddOn[] = [
+  { id: "s-plan-french", vendor: "好醉", name: "主方案・法式小花園", price: 30000, note: "無背板 6 柱 NT$ 26,800；無背板 4 柱 NT$ 21,500" },
+  { id: "s-plan-blushy", vendor: "好醉", name: "主方案・Blushy 粉霧花園", price: 33000, note: "無背板 NT$ 28,800；6 柱改可移動花型 NT$ 31,500" },
+  { id: "s-plan-fairy", vendor: "好醉", name: "主方案・精靈花園", price: 25800 },
   { id: "s-album", vendor: "好醉", name: "相本桌", price: 3500 },
   { id: "s-gift", vendor: "好醉", name: "收禮桌", price: 2000 },
   { id: "s-tables", vendor: "好醉", name: "雙桌面包套", price: 5000 },
@@ -117,7 +120,7 @@ export default function Home() {
           <div className="hero-stats">
             <div><b>2</b><span>家提案</span></div>
             <div><b>4</b><span>種完整主景</span></div>
-            <div><b>25</b><span>項方案與單品</span></div>
+            <div><b>28</b><span>項方案與單品</span></div>
           </div>
         </div>
         <div className="hero-visual">
@@ -178,14 +181,9 @@ export default function Home() {
             ["價格帶", "主景 NT$ 21,500–33,000", "整套 NT$ 35,800；單品 NT$ 700–5,500"],
             ["主視覺", "法式小花園、粉霧花園、精靈花園", "客製花藝主景整套方案"],
             ["方案內容", "Logo／相本桌佈置／地貼，公版 3 選 1", "含收禮桌、相本桌與新人客製設計立體字"],
-            ["進撤場", "專人進撤場佈置", "提案未載明，建議確認"],
-            ["場勘", "專人提前場勘", "提案未載明，建議確認"],
-            ["燈光", "含氛圍燈光設計／補光燈", "提案未載明"],
-            ["晚宴", "晚宴不加價", "提案未載明"],
-            ["場地限制", "僅限室內；報價僅送客區", "大型紙花需先定位，不建議移動"],
-            ["交通", "新竹市區優惠免車資", "提案未載明，建議確認"],
-            ["證婚共用", "若使用於證婚，需額外報價", "走道花可單獨搭配"],
-            ["最適合", "喜歡成熟公版、要快速確認完整大景", "想客製主景與新人名字，或只補強迎賓動線"],
+            ["進撤場", "有", "有"],
+            ["場勘", "有", "有"],
+            ["燈光", "有", "有"],
           ].map(([label, savor, rexi]) => (
             <div className="compare-row" role="row" key={label}>
               <div role="rowheader">{label}</div>
@@ -354,7 +352,7 @@ export default function Home() {
           <div className="section-heading">
             <p className="eyebrow">QUICK ESTIMATE</p>
             <h2>方案與加購快速試算</h2>
-            <p>勾選想要的方案或單品，先掌握大致金額。好醉主景方案仍請依上方價格比較；此處不含折扣、車資與未載明費用。</p>
+            <p>勾選想要的主方案或加購單品，先掌握大致金額。此處已包含好醉三款主方案與芮希花藝整套方案，不含折扣、車資與未載明費用。</p>
           </div>
           <div className="total-card">
             <span>目前加購估算</span>
